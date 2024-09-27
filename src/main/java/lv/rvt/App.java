@@ -8,25 +8,22 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Mark: ");
+        System.out.println("Gift: ");
         int firstNum = Integer.valueOf(scanner.nextLine());
              
-        if (firstNum == 0) {
-            System.out.println("imsposible!");
-        } else if (firstNum <= 49) {
-            System.out.println("fail");
-        } else if (firstNum <= 59){
-            System.out.println("1");
-        } else if (firstNum <= 69){
-            System.out.println("2");
-        } else if (firstNum <= 79){
-            System.out.println("3");
-        } else if (firstNum <= 89){
-            System.out.println("3");
-        } else if (firstNum <= 99){
-            System.out.println("4");
+        if (firstNum < 5000){
+            System.out.println("Nothing");
+        } else if (firstNum < 25000){
+            System.out.println(100+(firstNum-5000)*0.08);
+        } else if (firstNum < 55000){
+            System.out.println(1700+(firstNum-25000)*0.10);
+        } else if (firstNum < 200000){
+            System.out.println(4700+(firstNum-55000)*0.12);
+        } else if (firstNum < 1000000){
+            System.out.println(22000+(firstNum-55000)*0.15);    
         } else {
-            System.out.println("incredible!");
+            System.out.println(142100+(firstNum-1000000)*0.17);
         }
+
     }
 }
