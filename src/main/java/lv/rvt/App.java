@@ -8,14 +8,14 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Give a number: ");
-        long fact = 1;
+        long factor = 1;
 
         int Num = Integer.valueOf(scanner.nextLine());
         for ( int i = 1; i <= Num; i++) {
-            fact *= i;
+            factor *= i;
             
         }
-    System.out.println(fact);
+    System.out.println(factor);
     }
 }
 
