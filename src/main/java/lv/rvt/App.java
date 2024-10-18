@@ -1,21 +1,46 @@
 package lv.rvt;
 
-import java.util.*;
-
 public class App 
 {
-    public static void main( String[] args )
-    {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Give a number: ");
-        long factor = 1;
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("part: 1");
+            printStars(4);
+            printStars(5);
 
-        int Num = Integer.valueOf(scanner.nextLine());
-        for ( int i = 1; i <= Num; i++) {
-            factor *= i;
+            System.out.println("part: 2");
+            printSquare(4);
             
+            System.out.println("part: 3");
+            printRectangle(17, 3);
+
+            System.out.println("part: 4");
+            printTriangle(4);
+
         }
-    System.out.println(factor);
+        public static void printSquare(int size) {
+            for (int i = 0; i < size; i++) {
+                printStars(size); 
+            }
+        }
+        public static void printStars(int n) {
+            for (int i = 0; i < n; i++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        
+        public static void printRectangle(int width, int height) {
+            for (int i = 0; i < height; i++) {
+                printStars(width);
+            }
+        }
+
+        public static void printTriangle(int size) {
+            for (int i = 1; i <= size; i++) {
+                printStars(i); 
+            }
+        }
     }
 }
 
