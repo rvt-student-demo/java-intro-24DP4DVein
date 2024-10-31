@@ -5,7 +5,7 @@ public class App
     public class Main {
         public static void main(String[] args) {
             System.out.println("part: 1");
-            printStars(4);
+            printStars(5);
             printStars(6);
 
             System.out.println("part: 2");
